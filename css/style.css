@@ -63,10 +63,49 @@ header {
     font-size: 60px;
     font-weight: 400;
     letter-spacing: 35px;
+    animation: moveInTop 1s ease-out;
+    backface-visibility: hidden;
 }
 
 .heading-primary-sub {
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 17.4px;
+    animation: showIt 1s ease-in;
+   
+}
+@keyframes moveInTop {
+
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+        
+    }
+
+    80% {
+        transform: translateY(10px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes showIt {
+
+    0% {
+        opacity: 0;
+        
+        
+    }
+
+    
+
+    100%{
+        opacity: 1;
+        
+    }
+
 }
