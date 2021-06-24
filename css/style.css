@@ -50,12 +50,13 @@ header {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .heading-primary {
     color: #fff;
     text-transform: uppercase;
-
+    margin-bottom: 60px;
 }
 
 .heading-primary-main {
@@ -79,7 +80,6 @@ header {
     0% {
         opacity: 0;
         transform: translateY(-100px);
-        
     }
 
     80% {
@@ -97,15 +97,76 @@ header {
 
     0% {
         opacity: 0;
-        
-        
     }
-
-    
 
     100%{
         opacity: 1;
-        
     }
 
+}
+
+@keyframes moveButtonUp {
+
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.btn:link,
+.btn:visited{
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 50px;
+    position: relative;
+}
+
+.btn-animated {
+    animation: moveButtonUp 1s ease-out .75s;
+    animation-fill-mode: backwards;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 1);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .4s;
+}
+
+.btn-white::after {
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;   
 }
