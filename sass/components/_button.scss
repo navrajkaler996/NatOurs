@@ -27,6 +27,12 @@
         color: $color-grey-dark;
     }
 
+    &--green {
+        background-color: $color-primary;
+        color: $color-white;
+    }
+
+
     &--animated {
         animation: moveButtonUp 1s ease-out .75s;
         animation-fill-mode: backwards;
@@ -47,6 +53,10 @@
 
     &--white::after {
         background-color: $color-white;
+    }
+
+    &--green::after {
+        background-color: $color-primary;
     }
     
     &:hover::after {
