@@ -7,7 +7,15 @@
     box-shadow: 0 1.5rem 4rem rgba( #000000, .15);
     flex: 0 0 20%;
     transition: transform .2s;
-   
+
+    @include respond(tab-port) {
+
+        width: 65%;
+        overflow: hidden;
+        &:not(:last-child) {
+            margin-bottom: 3rem;
+        }   
+    }
 
     &__icon {
 
@@ -27,9 +35,17 @@
 
 .f1 {
     margin-left: 3rem;
+    @include respond(tab-port) {
+
+        margin-left: 0;
+    }
 }
 
 .f4 {
     margin-right: 3rem;
+    @include respond(tab-port) {
+
+        margin-right: 0;
+    }
 }
 

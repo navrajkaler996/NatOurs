@@ -10,6 +10,27 @@
 .u-margin-bottom-big {
 
     margin-bottom: 8rem;
+
+    @include respond(tab-port) {
+
+        margin-bottom: 4rem;
+    }
+}
+
+.story-responsive {
+
+    @include respond(phone) {
+
+        padding: 0 8rem;
+    }
+}
+
+.tours-button {
+
+    @include respond(tab-port) {
+
+        margin-top: 0rem;
+    }
 }
 
 
@@ -28,6 +49,11 @@
 
 .u-margin-top-huge {
     margin-top: 10rem;
+
+    @include respond(tab-port) {
+
+        margin-top: 2rem;
+    }
 }
 
 

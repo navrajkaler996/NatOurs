@@ -12,9 +12,29 @@
     transform: skewX(-12deg);
     position: relative;    
 
+    @include respond(tab-port) {
+
+        width: 90%;
+  
+        padding: 4rem;
+        padding-left: 7rem;
+    
+
+    }
+
+    @include respond(phone) {
+
+        transform: skewX(0);
+    }
+
     & > * {
 
         transform: skewX(12deg);
+
+        @include respond(phone) {
+
+            transform: skewX(0);
+        }
     }
 
     &__shape {
@@ -25,14 +45,20 @@
         clip-path: circle(50% at 50% 50%); 
         transform: translateX(-2rem) skewX(12deg); 
         display: flex;
-        justify-content: center;       
+        justify-content: center; 
+
+        @include respond(phone) {
+            transform: translateX(-2rem) skewX(0); 
+        }
+        
+        
     }
 
     &__image {
         
         height: 100%;
         transition: all .1s;
-        transform: scale(1.4);
+        transform: scale(1.4);      
         
     }
 
@@ -61,4 +87,6 @@
         filter: blur(3px) brightness(80%);
         
     }
+
+    
 }
